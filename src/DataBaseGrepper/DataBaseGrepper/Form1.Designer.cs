@@ -103,6 +103,7 @@
             this.btnTestConnection.TabIndex = 11;
             this.btnTestConnection.Text = "Test Database Connection";
             this.btnTestConnection.UseVisualStyleBackColor = true;
+            this.btnTestConnection.Click += new System.EventHandler(this.btnTestConnection_Click);
             // 
             // btnFindReplaceAndPreview
             // 
@@ -140,7 +141,7 @@
             this.btnFindReplaceRunOnDatabase.AutoSize = true;
             this.btnFindReplaceRunOnDatabase.Location = new System.Drawing.Point(839, 196);
             this.btnFindReplaceRunOnDatabase.Name = "btnFindReplaceRunOnDatabase";
-            this.btnFindReplaceRunOnDatabase.Size = new System.Drawing.Size(205, 23);
+            this.btnFindReplaceRunOnDatabase.Size = new System.Drawing.Size(204, 23);
             this.btnFindReplaceRunOnDatabase.TabIndex = 15;
             this.btnFindReplaceRunOnDatabase.Text = "Find/Replace Run on Database";
             this.btnFindReplaceRunOnDatabase.UseVisualStyleBackColor = true;
@@ -167,6 +168,7 @@
             this.txtServerName.Name = "txtServerName";
             this.txtServerName.Size = new System.Drawing.Size(385, 20);
             this.txtServerName.TabIndex = 19;
+            this.txtServerName.Text = "hgwwdb.eastus.cloudapp.azure.com";
             // 
             // label2
             // 
@@ -183,6 +185,7 @@
             this.txtDatabaseName.Name = "txtDatabaseName";
             this.txtDatabaseName.Size = new System.Drawing.Size(385, 20);
             this.txtDatabaseName.TabIndex = 21;
+            this.txtDatabaseName.Text = "dev_gerber_sitefinity";
             // 
             // label4
             // 
@@ -199,6 +202,7 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(385, 20);
             this.txtLogin.TabIndex = 23;
+            this.txtLogin.Text = "shared_dev_user";
             // 
             // label5
             // 
@@ -216,6 +220,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(385, 20);
             this.txtPassword.TabIndex = 25;
+            this.txtPassword.Text = "devuser$123#ab";
             // 
             // label6
             // 

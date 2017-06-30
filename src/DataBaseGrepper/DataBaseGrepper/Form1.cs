@@ -46,6 +46,21 @@ namespace DataBaseGrepper
             }
         }
 
+        private bool TestDatabaseConnection()
+        {
+            try
+            {
+                cn.Open();
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         private void LoadTableName()
         {
             databaseTables = new List<string>();
@@ -180,9 +195,9 @@ namespace DataBaseGrepper
 
                                 if (isGenerateScripToFile)
                                 {
-                                    string newEntry = dr[0].ToString().Replace(txtFind.Text, txtReplace.Text).Replace("\"", "\\\"");
+                                    string newEntry = dr[0].ToString().Replace(txtFind.Text, txtReplace.Text);
 
-                                    string sqlLine = "UPDATE " + tableName + " SET " + columnName + " = \"" + newEntry + "\" WHERE " + columnName + " = \"" + dr[0].ToString().Replace("\"", "\\\"").Replace("'", "''") + "\"";
+                                    string sqlLine = "UPDATE " + tableName + " SET " + columnName + " = N'" + newEntry + "' WHERE " + columnName + " = N'" + dr[0].ToString() + "'";
                                     dbScript.Add(sqlLine);
                                 }
 
@@ -362,6 +377,12 @@ namespace DataBaseGrepper
 
                 saveFile.Close();
             }
+        }
+
+        private void btnTestConnection_Click(object sender, EventArgs e)
+        {
+            SetConnection(txtServerName.Text, txtDatabaseName.Text, txtLogin.Text, txtPassword.Text);
+            MessageBox.Show("Connection " + (TestDatabaseConnection() ? "successful" : "failed"));
         }
     }
 }
