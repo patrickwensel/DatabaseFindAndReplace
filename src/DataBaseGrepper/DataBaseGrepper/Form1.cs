@@ -195,9 +195,9 @@ namespace DataBaseGrepper
 
                                 if (isGenerateScripToFile)
                                 {
-                                    string newEntry = dr[0].ToString().Replace(txtFind.Text, txtReplace.Text);
+                                    string newEntry = dr[0].ToString().Replace(txtFind.Text, txtReplace.Text).Replace("'", "''");
 
-                                    string sqlLine = "UPDATE " + tableName + " SET " + columnName + " = N'" + newEntry + "' WHERE " + columnName + " = N'" + dr[0].ToString() + "'";
+                                    string sqlLine = "UPDATE " + tableName + " SET " + columnName + " = N'" + newEntry + "' WHERE " + columnName + " = N'" + dr[0].ToString().Replace("'", "''") + "'";
                                     dbScript.Add(sqlLine);
                                 }
 
@@ -311,32 +311,39 @@ namespace DataBaseGrepper
             }
             else
             {
-                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-
-                saveFileDialog1.Filter = "sql files (*.sql)|*.sql|All files (*.*)|*.*";
-                saveFileDialog1.FilterIndex = 1;
-                saveFileDialog1.RestoreDirectory = true;
-
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                if (dbScript.Count > 0)
                 {
-                    StreamWriter saveFile = new StreamWriter(saveFileDialog1.FileName);
+                    SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
-                    saveFile.WriteLine("BEGIN TRY");
-                    saveFile.WriteLine("BEGIN TRANSACTION");
+                    saveFileDialog1.Filter = "sql files (*.sql)|*.sql|All files (*.*)|*.*";
+                    saveFileDialog1.FilterIndex = 1;
+                    saveFileDialog1.RestoreDirectory = true;
 
-
-                    foreach (var line in dbScript)
+                    if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                     {
-                        saveFile.WriteLine(line);
+                        StreamWriter saveFile = new StreamWriter(saveFileDialog1.FileName);
+
+                        saveFile.WriteLine("BEGIN TRY");
+                        saveFile.WriteLine("BEGIN TRANSACTION");
+
+
+                        foreach (var line in dbScript)
+                        {
+                            saveFile.WriteLine(line);
+                        }
+
+                        saveFile.WriteLine("COMMIT");
+                        saveFile.WriteLine("END TRY");
+                        saveFile.WriteLine("BEGIN CATCH");
+                        saveFile.WriteLine("ROLLBACK");
+                        saveFile.WriteLine("END CATCH");
+
+                        saveFile.Close();
                     }
-
-                    saveFile.WriteLine("COMMIT");
-                    saveFile.WriteLine("END TRY");
-                    saveFile.WriteLine("BEGIN CATCH");
-                    saveFile.WriteLine("ROLLBACK");
-                    saveFile.WriteLine("END CATCH");
-
-                    saveFile.Close();
+                }
+                else
+                {
+                    rbResults.Text += "Nothing found on the database matching the provided data";
                 }
 
                 txtStatus.Text = "Done finding";
@@ -382,7 +389,7 @@ namespace DataBaseGrepper
         private void btnTestConnection_Click(object sender, EventArgs e)
         {
             SetConnection(txtServerName.Text, txtDatabaseName.Text, txtLogin.Text, txtPassword.Text);
-            MessageBox.Show("Connection " + (TestDatabaseConnection() ? "successful" : "failed"));
+            MessageBox.Show("Connection " + (TestDatabaseConnection() ? "successful" : "failed"), "", MessageBoxButtons.OK, (TestDatabaseConnection() ? MessageBoxIcon.None : MessageBoxIcon.Error));
         }
     }
 }

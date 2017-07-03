@@ -71,7 +71,7 @@
             this.txtFind.Location = new System.Drawing.Point(116, 118);
             this.txtFind.Name = "txtFind";
             this.txtFind.Size = new System.Drawing.Size(385, 20);
-            this.txtFind.TabIndex = 5;
+            this.txtFind.TabIndex = 4;
             // 
             // btnFindAndPreview
             // 
@@ -79,7 +79,7 @@
             this.btnFindAndPreview.Location = new System.Drawing.Point(162, 196);
             this.btnFindAndPreview.Name = "btnFindAndPreview";
             this.btnFindAndPreview.Size = new System.Drawing.Size(99, 23);
-            this.btnFindAndPreview.TabIndex = 6;
+            this.btnFindAndPreview.TabIndex = 8;
             this.btnFindAndPreview.Text = "Find and Preview";
             this.btnFindAndPreview.UseVisualStyleBackColor = true;
             this.btnFindAndPreview.Click += new System.EventHandler(this.btnFindAndPreview_Click);
@@ -89,7 +89,7 @@
             this.btnSaveToFile.Location = new System.Drawing.Point(968, 12);
             this.btnSaveToFile.Name = "btnSaveToFile";
             this.btnSaveToFile.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveToFile.TabIndex = 10;
+            this.btnSaveToFile.TabIndex = 14;
             this.btnSaveToFile.Text = "Save To File";
             this.btnSaveToFile.UseVisualStyleBackColor = true;
             this.btnSaveToFile.Click += new System.EventHandler(this.btnSaveToFile_Click);
@@ -100,7 +100,7 @@
             this.btnTestConnection.Location = new System.Drawing.Point(12, 196);
             this.btnTestConnection.Name = "btnTestConnection";
             this.btnTestConnection.Size = new System.Drawing.Size(144, 23);
-            this.btnTestConnection.TabIndex = 11;
+            this.btnTestConnection.TabIndex = 7;
             this.btnTestConnection.Text = "Test Database Connection";
             this.btnTestConnection.UseVisualStyleBackColor = true;
             this.btnTestConnection.Click += new System.EventHandler(this.btnTestConnection_Click);
@@ -111,7 +111,7 @@
             this.btnFindReplaceAndPreview.Location = new System.Drawing.Point(267, 196);
             this.btnFindReplaceAndPreview.Name = "btnFindReplaceAndPreview";
             this.btnFindReplaceAndPreview.Size = new System.Drawing.Size(144, 23);
-            this.btnFindReplaceAndPreview.TabIndex = 12;
+            this.btnFindReplaceAndPreview.TabIndex = 9;
             this.btnFindReplaceAndPreview.Text = "Find/Replace and Preview";
             this.btnFindReplaceAndPreview.UseVisualStyleBackColor = true;
             // 
@@ -121,7 +121,7 @@
             this.btbFindReplaceGenateScriptsPreview.Location = new System.Drawing.Point(417, 196);
             this.btbFindReplaceGenateScriptsPreview.Name = "btbFindReplaceGenateScriptsPreview";
             this.btbFindReplaceGenateScriptsPreview.Size = new System.Drawing.Size(205, 23);
-            this.btbFindReplaceGenateScriptsPreview.TabIndex = 13;
+            this.btbFindReplaceGenateScriptsPreview.TabIndex = 10;
             this.btbFindReplaceGenateScriptsPreview.Text = "Find/Replace Generate Scripts Preview";
             this.btbFindReplaceGenateScriptsPreview.UseVisualStyleBackColor = true;
             // 
@@ -131,7 +131,7 @@
             this.btnFindReplaceGenerateScriptsToFile.Location = new System.Drawing.Point(628, 196);
             this.btnFindReplaceGenerateScriptsToFile.Name = "btnFindReplaceGenerateScriptsToFile";
             this.btnFindReplaceGenerateScriptsToFile.Size = new System.Drawing.Size(205, 23);
-            this.btnFindReplaceGenerateScriptsToFile.TabIndex = 14;
+            this.btnFindReplaceGenerateScriptsToFile.TabIndex = 11;
             this.btnFindReplaceGenerateScriptsToFile.Text = "Find/Replace Generate Scripts to File";
             this.btnFindReplaceGenerateScriptsToFile.UseVisualStyleBackColor = true;
             this.btnFindReplaceGenerateScriptsToFile.Click += new System.EventHandler(this.btnFindReplaceGenerateScriptsToFile_Click);
@@ -142,7 +142,7 @@
             this.btnFindReplaceRunOnDatabase.Location = new System.Drawing.Point(839, 196);
             this.btnFindReplaceRunOnDatabase.Name = "btnFindReplaceRunOnDatabase";
             this.btnFindReplaceRunOnDatabase.Size = new System.Drawing.Size(204, 23);
-            this.btnFindReplaceRunOnDatabase.TabIndex = 15;
+            this.btnFindReplaceRunOnDatabase.TabIndex = 12;
             this.btnFindReplaceRunOnDatabase.Text = "Find/Replace Run on Database";
             this.btnFindReplaceRunOnDatabase.UseVisualStyleBackColor = true;
             // 
@@ -151,7 +151,7 @@
             this.txtReplace.Location = new System.Drawing.Point(116, 144);
             this.txtReplace.Name = "txtReplace";
             this.txtReplace.Size = new System.Drawing.Size(385, 20);
-            this.txtReplace.TabIndex = 17;
+            this.txtReplace.TabIndex = 5;
             // 
             // label1
             // 
@@ -167,7 +167,7 @@
             this.txtServerName.Location = new System.Drawing.Point(116, 14);
             this.txtServerName.Name = "txtServerName";
             this.txtServerName.Size = new System.Drawing.Size(385, 20);
-            this.txtServerName.TabIndex = 19;
+            this.txtServerName.TabIndex = 0;
             this.txtServerName.Text = "hgwwdb.eastus.cloudapp.azure.com";
             // 
             // label2
@@ -184,7 +184,7 @@
             this.txtDatabaseName.Location = new System.Drawing.Point(116, 40);
             this.txtDatabaseName.Name = "txtDatabaseName";
             this.txtDatabaseName.Size = new System.Drawing.Size(385, 20);
-            this.txtDatabaseName.TabIndex = 21;
+            this.txtDatabaseName.TabIndex = 1;
             this.txtDatabaseName.Text = "dev_gerber_sitefinity";
             // 
             // label4
@@ -201,7 +201,7 @@
             this.txtLogin.Location = new System.Drawing.Point(116, 66);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(385, 20);
-            this.txtLogin.TabIndex = 23;
+            this.txtLogin.TabIndex = 2;
             this.txtLogin.Text = "shared_dev_user";
             // 
             // label5
@@ -219,7 +219,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(385, 20);
-            this.txtPassword.TabIndex = 25;
+            this.txtPassword.TabIndex = 3;
             this.txtPassword.Text = "devuser$123#ab";
             // 
             // label6
@@ -236,7 +236,7 @@
             this.txtScriptPath.Location = new System.Drawing.Point(116, 170);
             this.txtScriptPath.Name = "txtScriptPath";
             this.txtScriptPath.Size = new System.Drawing.Size(385, 20);
-            this.txtScriptPath.TabIndex = 27;
+            this.txtScriptPath.TabIndex = 6;
             // 
             // label7
             // 
@@ -254,7 +254,7 @@
             this.btnScriptPath.Location = new System.Drawing.Point(507, 168);
             this.btnScriptPath.Name = "btnScriptPath";
             this.btnScriptPath.Size = new System.Drawing.Size(26, 23);
-            this.btnScriptPath.TabIndex = 28;
+            this.btnScriptPath.TabIndex = 7;
             this.btnScriptPath.Text = "...";
             this.btnScriptPath.UseVisualStyleBackColor = true;
             // 
@@ -289,7 +289,7 @@
             this.rbResults.Location = new System.Drawing.Point(12, 225);
             this.rbResults.Name = "rbResults";
             this.rbResults.Size = new System.Drawing.Size(1031, 405);
-            this.rbResults.TabIndex = 30;
+            this.rbResults.TabIndex = 13;
             this.rbResults.Text = "";
             // 
             // Form1
