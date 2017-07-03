@@ -31,7 +31,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtFind = new System.Windows.Forms.TextBox();
             this.btnFindAndPreview = new System.Windows.Forms.Button();
-            this.btnSaveToFile = new System.Windows.Forms.Button();
             this.btnTestConnection = new System.Windows.Forms.Button();
             this.btnFindReplaceAndPreview = new System.Windows.Forms.Button();
             this.btbFindReplaceGenateScriptsPreview = new System.Windows.Forms.Button();
@@ -47,9 +46,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtScriptPath = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnScriptPath = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.pbStatus = new System.Windows.Forms.ToolStripProgressBar();
             this.txtStatus = new System.Windows.Forms.ToolStripStatusLabel();
@@ -76,6 +72,7 @@
             // btnFindAndPreview
             // 
             this.btnFindAndPreview.AutoSize = true;
+            this.btnFindAndPreview.Enabled = false;
             this.btnFindAndPreview.Location = new System.Drawing.Point(162, 196);
             this.btnFindAndPreview.Name = "btnFindAndPreview";
             this.btnFindAndPreview.Size = new System.Drawing.Size(99, 23);
@@ -83,16 +80,6 @@
             this.btnFindAndPreview.Text = "Find and Preview";
             this.btnFindAndPreview.UseVisualStyleBackColor = true;
             this.btnFindAndPreview.Click += new System.EventHandler(this.btnFindAndPreview_Click);
-            // 
-            // btnSaveToFile
-            // 
-            this.btnSaveToFile.Location = new System.Drawing.Point(968, 12);
-            this.btnSaveToFile.Name = "btnSaveToFile";
-            this.btnSaveToFile.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveToFile.TabIndex = 14;
-            this.btnSaveToFile.Text = "Save To File";
-            this.btnSaveToFile.UseVisualStyleBackColor = true;
-            this.btnSaveToFile.Click += new System.EventHandler(this.btnSaveToFile_Click);
             // 
             // btnTestConnection
             // 
@@ -108,6 +95,7 @@
             // btnFindReplaceAndPreview
             // 
             this.btnFindReplaceAndPreview.AutoSize = true;
+            this.btnFindReplaceAndPreview.Enabled = false;
             this.btnFindReplaceAndPreview.Location = new System.Drawing.Point(267, 196);
             this.btnFindReplaceAndPreview.Name = "btnFindReplaceAndPreview";
             this.btnFindReplaceAndPreview.Size = new System.Drawing.Size(144, 23);
@@ -118,6 +106,7 @@
             // btbFindReplaceGenateScriptsPreview
             // 
             this.btbFindReplaceGenateScriptsPreview.AutoSize = true;
+            this.btbFindReplaceGenateScriptsPreview.Enabled = false;
             this.btbFindReplaceGenateScriptsPreview.Location = new System.Drawing.Point(417, 196);
             this.btbFindReplaceGenateScriptsPreview.Name = "btbFindReplaceGenateScriptsPreview";
             this.btbFindReplaceGenateScriptsPreview.Size = new System.Drawing.Size(205, 23);
@@ -139,6 +128,7 @@
             // btnFindReplaceRunOnDatabase
             // 
             this.btnFindReplaceRunOnDatabase.AutoSize = true;
+            this.btnFindReplaceRunOnDatabase.Enabled = false;
             this.btnFindReplaceRunOnDatabase.Location = new System.Drawing.Point(839, 196);
             this.btnFindReplaceRunOnDatabase.Name = "btnFindReplaceRunOnDatabase";
             this.btnFindReplaceRunOnDatabase.Size = new System.Drawing.Size(204, 23);
@@ -168,7 +158,6 @@
             this.txtServerName.Name = "txtServerName";
             this.txtServerName.Size = new System.Drawing.Size(385, 20);
             this.txtServerName.TabIndex = 0;
-            this.txtServerName.Text = "hgwwdb.eastus.cloudapp.azure.com";
             // 
             // label2
             // 
@@ -185,7 +174,6 @@
             this.txtDatabaseName.Name = "txtDatabaseName";
             this.txtDatabaseName.Size = new System.Drawing.Size(385, 20);
             this.txtDatabaseName.TabIndex = 1;
-            this.txtDatabaseName.Text = "dev_gerber_sitefinity";
             // 
             // label4
             // 
@@ -202,7 +190,6 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(385, 20);
             this.txtLogin.TabIndex = 2;
-            this.txtLogin.Text = "shared_dev_user";
             // 
             // label5
             // 
@@ -220,7 +207,6 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(385, 20);
             this.txtPassword.TabIndex = 3;
-            this.txtPassword.Text = "devuser$123#ab";
             // 
             // label6
             // 
@@ -230,33 +216,6 @@
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 24;
             this.label6.Text = "Password";
-            // 
-            // txtScriptPath
-            // 
-            this.txtScriptPath.Location = new System.Drawing.Point(116, 170);
-            this.txtScriptPath.Name = "txtScriptPath";
-            this.txtScriptPath.Size = new System.Drawing.Size(385, 20);
-            this.txtScriptPath.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(51, 173);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Script Path";
-            // 
-            // btnScriptPath
-            // 
-            this.btnScriptPath.AutoSize = true;
-            this.btnScriptPath.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnScriptPath.Location = new System.Drawing.Point(507, 168);
-            this.btnScriptPath.Name = "btnScriptPath";
-            this.btnScriptPath.Size = new System.Drawing.Size(26, 23);
-            this.btnScriptPath.TabIndex = 7;
-            this.btnScriptPath.Text = "...";
-            this.btnScriptPath.UseVisualStyleBackColor = true;
             // 
             // statusStrip1
             // 
@@ -299,9 +258,6 @@
             this.ClientSize = new System.Drawing.Size(1055, 655);
             this.Controls.Add(this.rbResults);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.btnScriptPath);
-            this.Controls.Add(this.txtScriptPath);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtLogin);
@@ -317,7 +273,6 @@
             this.Controls.Add(this.btbFindReplaceGenateScriptsPreview);
             this.Controls.Add(this.btnFindReplaceAndPreview);
             this.Controls.Add(this.btnTestConnection);
-            this.Controls.Add(this.btnSaveToFile);
             this.Controls.Add(this.btnFindAndPreview);
             this.Controls.Add(this.txtFind);
             this.Controls.Add(this.label3);
@@ -337,7 +292,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFind;
         private System.Windows.Forms.Button btnFindAndPreview;
-        private System.Windows.Forms.Button btnSaveToFile;
         private System.Windows.Forms.Button btnTestConnection;
         private System.Windows.Forms.Button btnFindReplaceAndPreview;
         private System.Windows.Forms.Button btbFindReplaceGenateScriptsPreview;
@@ -353,9 +307,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtScriptPath;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnScriptPath;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripProgressBar pbStatus;
         private System.Windows.Forms.ToolStripStatusLabel txtStatus;
